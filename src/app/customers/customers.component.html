@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <h3>Customer List</h3>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <ul *ngIf="customers.length > 0" class="list-group">
+    <li *ngFor="let customer of customers" class="list-group-item" name="customers">
+      <strong>{{ customer.name }}</strong> - {{ customer.email }} ({{ customer.phone_number }})
+    </li>
+  </ul>
+</div>
